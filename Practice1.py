@@ -5,7 +5,7 @@ def shop(*args, **kwargs):
     discount = kwargs["discount"]
     delivery = kwargs["delivery"]
 
-    apply_discount = lambda total, percent: total * (1 - percent / 100)
+    apply_discount = lambda subtotal, percent: subtotal * (1 - discount / 100)
  
     subtotal = sum(args)
     after_discount = apply_discount(subtotal, discount)
